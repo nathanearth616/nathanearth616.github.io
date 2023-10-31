@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mastering DVWA: Solving the Persistent Security Setting Issue"
-categories: misc
+categories: metasploitable
 ---
 
 **Introduction:** As aspiring ethical hackers and web security enthusiasts, we often delve into platforms like DVWA (Damn Vulnerable Web Application) to sharpen our skills. However, DVWA sometimes presents us with intriguing challenges beyond the vulnerabilities it was designed to showcase. One such puzzle is the persistent issue of security settings reverting to 'high' after we set them to 'low.' In this blog, we'll explore this issue and provide a step-by-step guide on how to solve it effectively.
@@ -24,4 +24,4 @@ categories: misc
 
 **6. Testing and Verification:** To ensure that the issue is resolved, try uploading your exploit after setting the security level to 'low.' Verify that the setting remains 'low' on the upload page.
 
-**Conclusion:** Solving the persistent security setting issue in DVWA can be a rewarding exercise in problem-solving and understanding web application behavior. By following the steps outlined in this guide, you can gain more control over the environment and conduct thorough security testing while respecting the ethical principles that guide the world of cybersecurity. Happy hacking, responsibly!
+**Conclusion:** Solving the persistent security setting issue in DVWA can be a rewarding exercise in problem-solving and understanding web application behavior. By following the steps outlined in this guide, you can gain more control over the environment and conduct thorough security testing while respecting the ethical principles that guide the world of cybersecurity. Happy hacking!
