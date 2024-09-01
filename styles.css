@@ -1,0 +1,322 @@
+body {
+    font-family: "Roboto", system-ui, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-size: 14px; /* Added base font size */
+    font-weight: 400;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem; /* 20px equivalent in rem */
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.14rem; /* 30px equivalent */
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.username {
+    margin: 0.25rem 0;
+    font-size: 0.86rem; /* 12px equivalent */
+    color: #888;
+    font-weight: 300;
+}
+
+.title {
+    margin: 0.25rem 0 0;
+    font-size: 1rem; /* 14px */
+    color: #808080;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background-color: #666;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.about, .work-experience {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* General text styles */
+body {
+    font-family: "Roboto", system-ui, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.14rem; /* 30px equivalent */
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.71rem; /* 24px equivalent */
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.28rem; /* 18px equivalent */
+    color: #444;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    margin-top: 0;
+}
+ 
+
+.pp {
+    padding-bottom: 1.5rem;
+ }
+
+/* Paragraphs */
+p {
+    font-size: 14px; /* 14px */
+    margin-bottom: 1rem;
+}
+
+/* Job-related styles */
+.job h3 {
+    margin-bottom: 0.25rem;
+}
+
+.job .company {
+    font-size: 1rem; /* 14px */
+    color: #808080;
+    margin-bottom: 0.25rem;
+    font-weight: 400;
+}
+
+.job .company-last {
+    padding-bottom: 50px;
+}
+
+.job .company .dash {
+    position: relative;
+    display: inline-block;
+}
+
+.job .company .dash::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #808080;
+}
+
+.job .duration {
+    font-size: 0.86rem; /* 12px equivalent */
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-style: italic; /* Added italic style */
+    font-weight: 300;
+}
+
+/* Links */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Additional styles */
+.section-title {
+    font-size: 1.5rem; /* 21px equivalent */
+    color: #222;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.highlight {
+    font-weight: 700;
+    color: #0066cc;
+}
+
+/* Add more styles for the rest of your content as needed */
+
+footer {
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    max-width: 400px;
+    height: 1px;
+    background-color: #eaeaea;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+    text-shadow: 0 0 10px rgba(51, 51, 51, 0.3);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.social-links a:hover {
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    color: #222;
+    margin: 0;
+}
+
+.dark-mode-icon {
+    width: 24px;  /* Adjust this value based on your image size */
+    height: 24px; /* Adjust this value based on your image size */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 50%;  /* This assumes your icon is circular */
+}
+
+.dark-mode-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .section-title {
+    color: #ffffff;
+    border-bottom-color: #444;
+}
+
+body.dark-mode .job .company {
+    color: #b0b0b0;
+}
+
+body.dark-mode .job .duration {
+    color: #999;
+}
+
+body.dark-mode a {
+    color: #66b3ff;
+}
+
+body.dark-mode .social-links a {
+    color: #f0f0f0;
+}
+
+body.dark-mode .social-links a:hover {
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode footer::before {
+    background-color: #444;
+}
+
+/* Transition for smooth mode change */
+body, body * {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

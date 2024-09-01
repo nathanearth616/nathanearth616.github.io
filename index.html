@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kato's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <!-- test comment -->
+    <header>
+        <div class="profile-container">
+            <img src="mad.jpg" alt="Kato's profile picture" class="profile-image">
+            <div class="profile-info">
+                <h1>Kato</h1>
+                <p class="username">@katozen88 everywhere</p>
+                <p class="title">software engineer <span class="dot"></span> ar <span class="dot"></span> blockchain</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <img src="dark1.png" alt="Dark mode icon" class="dark-mode-icon" id="darkModeToggle">
+            </div>
+            <p>I'm a <span class="highlight">passionate developer</span> currently focused on building a proper local exchange for  Ghana's<br>
+                growing crypto economy. I have interests in 3D modelling and animation and hang with<br>
+                python most of the time but I love to play with new tech whenever I can. 
+            </p>
+        </section>
+
+        <section class="work-experience">
+            <h2>XP</h2>
+            <div class="job">
+                <p class="duration">January 2024 - Present</p>
+                <h3>maoyi - Buy and Sell</h3>
+                <p class="company">Software Engineer</p>
+                <p class="pp">Currently developing an automated bitcoin exchange.</p>
+            </div>
+            <div class="job">
+                <p class="duration">April 2023 - November 2023</p>
+                <h3>Project Spinup [ CILRED-399696 ]</h3>
+                <p class="company">Augmented Reality Developer</p>
+                <p class="pp">Development of version one of a 3D ai persona in augmented reality, which is still in active <br>
+                private testing and continued development.</p>
+            </div>
+            <div class="job">
+                <p class="duration">December 2022</p>
+                <h3>AITI-KACE</h3>
+                <p class="company">Completed some teachings from the overlords at AITI</p>
+                <p class="company-last">Self explanatory I guess.</p>
+            </div>
+            <p>
+                I love reading the latest crypto whitepapers, sometimes I try to understand the abstraction within <br>
+                LLMs, either that or I'm ricing my latest linux distro, maybe I'm catching up on chapters from <br>
+                Penrose's <a href="">road to reality</a>. I like to see myself as a superhero and and programming is the <br>
+                closest thing I have to superpowers.
+            </p>
+        </section>
+        <!-- ... rest of your content ... -->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Zen Kato. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/katozen88et="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="mailto:katozen88@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    function setDarkMode(isDark) {
+        body.classList.toggle('dark-mode', isDark);
+        body.classList.toggle('light-mode', !isDark);
+        darkModeToggle.src = isDark ? 'dark2.png' : 'dark1.png';
+        darkModeToggle.alt = isDark ? 'Light mode icon' : 'Dark mode icon';
+        
+        localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+        const isDark = !body.classList.contains('dark-mode');
+        setDarkMode(isDark);
+    });
+
+    // Check for saved user preference, if any, on load
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        setDarkMode(true);
+    }
+</script>
+</html>
