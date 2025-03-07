@@ -169,6 +169,12 @@ a:hover {
     text-decoration: underline;
 }
 
+.external-link-icon {
+    font-size: 0.8em; /* Adjust size as needed */
+    margin-left: 5px; /* Add some spacing */
+    text-decoration: none; /* Remove underline */
+}
+
 /* Additional styles */
 .section-title {
     font-size: 1.5rem; /* 21px equivalent */
@@ -387,4 +393,25 @@ p {
     white-space: normal;
     overflow-wrap: break-word;
     word-wrap: break-word;
+}
+
+.external-link-svg {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    vertical-align: middle;
+    display: inline-block;
+    color: #fff;
+}
+
+.no-underline {
+    text-decoration: none !important;
+}
+
+.no-underline:hover {
+    text-decoration: none !important;
+}
+
+body.dark-mode .external-link-svg {
+    filter: invert(1) brightness(100);  /* This will make the SVG white */
 }
