@@ -26,7 +26,7 @@
         <section class="about">
             <div class="section-header">
                 <h2 class="section-title">About Me</h2>
-                <img src="dark1.png" alt="Dark mode icon" class="dark-mode-icon" id="darkModeToggle">
+                <img src="darksun.svg" alt="Dark mode icon" class="dark-mode-icon" id="darkModeToggle">
             </div>
             <p>I'm a <span class="highlight">tinkerer at least,</span> currently focused on building a proper local exchange for  Ghana's<br>
                 growing crypto economy. I have interests in 3D modelling and animation and hang with<br>
@@ -91,7 +91,9 @@
     function setDarkMode(isDark) {
         body.classList.toggle('dark-mode', isDark);
         body.classList.toggle('light-mode', !isDark);
-        darkModeToggle.src = isDark ? 'dark2.png' : 'dark1.png';
+        
+        // We're no longer changing the src, just toggling a class
+        darkModeToggle.classList.toggle('icon-light', isDark);
         darkModeToggle.alt = isDark ? 'Light mode icon' : 'Dark mode icon';
         
         localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');

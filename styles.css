@@ -268,16 +268,27 @@ footer::before {
 }
 
 .dark-mode-icon {
-    width: 24px;  /* Adjust this value based on your image size */
-    height: 24px; /* Adjust this value based on your image size */
-    transition: all 0.3s ease;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
-    border-radius: 50%;  /* This assumes your icon is circular */
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 50%;
+    filter: none; /* Default for light mode */
 }
 
 .dark-mode-icon:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.5);
+    transform: rotate(30deg) scale(1.1);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .dark-mode-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode-icon.icon-light,
+body.dark-mode .dark-mode-icon:not(.icon-light) {
+    filter: invert(1); /* This will invert the colors */
 }
 
 /* Dark mode styles */
@@ -413,5 +424,10 @@ p {
 }
 
 body.dark-mode .external-link-svg {
+    filter: invert(1) brightness(100);  /* This will make the SVG white */
+}
+
+/* Add this to your existing styles */
+body.dark-mode .dark-mode-icon {
     filter: invert(1) brightness(100);  /* This will make the SVG white */
 }
