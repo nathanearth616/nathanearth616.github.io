@@ -548,11 +548,16 @@ a:focus, button:focus {
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .work-experience {
-        padding-left: 2rem;
+        padding-left: 2.5rem;
     }
 
     .work-experience::before {
         left: 15px;
+        top: 40px;
+    }
+
+    .job {
+        padding-left: 1.5rem;
     }
 
     .job::before {
@@ -568,31 +573,30 @@ a:focus, button:focus {
 }
 
 @media (max-width: 480px) {
-    .work-experience {
-        padding-left: 1.5rem;
+    .about, .work-experience {
+        padding: 0 1rem 0 2.5rem; /* Keep left padding for timeline */
     }
 
     .work-experience::before {
-        left: 12px;
+        left: 15px;
+    }
+
+    .job {
+        padding: 1rem;
+        background: rgba(0,0,0,0.02);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        margin-left: 0.5rem;
     }
 
     .job::before {
-        left: -1.4rem;
-        width: 8px;
-        height: 8px;
+        left: -1.75rem;
+        width: 10px;
+        height: 10px;
     }
 
     .job::after {
-        left: -1.2rem;
-        width: 1.2rem;
+        left: -1.5rem;
+        width: 1.5rem;
     }
-}
-
-/* Make the first job's dot green - using more specific selector */
-.work-experience .job:first-of-type::before {
-    background: #4CAF50 !important; /* Using !important to override any other styles */
-}
-
-.dark-mode .work-experience .job:first-of-type::before {
-    background: #4CAF50 !important;
 }
