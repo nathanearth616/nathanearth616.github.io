@@ -6,6 +6,7 @@ body {
     padding: 0;
     font-size: 14px; /* Added base font size */
     font-weight: 400;
+    top: 0 !important;
 }
 
 header {
@@ -21,6 +22,13 @@ header {
     gap: 1rem;
     max-width: 800px;
     width: 100%;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .profile-image {
@@ -430,4 +438,161 @@ body.dark-mode .external-link-svg {
 /* Add this to your existing styles */
 body.dark-mode .dark-mode-icon {
     filter: invert(1) brightness(100);  /* This will make the SVG white */
+}
+
+
+/* Tablet Optimization */
+@media (max-width: 1024px) {
+    .profile-container {
+        padding: 0 2rem;
+    }
+    
+    .about, .work-experience {
+        padding: 0 2rem;
+    }
+}
+
+/* Better Mobile Experience */
+@media (max-width: 480px) {
+    h1 { font-size: 1.5rem; }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .job {
+        padding: 1rem;
+        background: rgba(0,0,0,0.02);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Add focus styles */
+a:focus, button:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+.work-experience {
+    position: relative;
+    padding-left: 3rem;
+}
+
+/* Timeline line */
+.work-experience::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    bottom: 0;
+    width: 2px;
+    background: #e0e0e0;
+}
+
+.dark-mode .work-experience::before {
+    background: #444;
+}
+
+.job {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+/* Timeline dots - grey for past jobs */
+.job::before {
+    content: '';
+    position: absolute;
+    left: -2.25rem;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #999; /* Grey for past jobs */
+    border: 2px solid white;
+    z-index: 1;
+}
+
+/* Green dot for most recent job */
+.job:first-child::before {
+    background: #4CAF50;
+}
+
+/* Connecting lines */
+.job::after {
+    content: '';
+    position: absolute;
+    left: -1.95rem;
+    top: 12px;
+    width: 2rem;
+    height: 2px;
+    background: #e0e0e0;
+}
+
+/* Dark mode adjustments */
+.dark-mode .job::before {
+    background: #666; /* Darker grey for past jobs */
+    border-color: #1a1a1a;
+}
+
+.dark-mode .job:first-child::before {
+    background: #4CAF50; /* Keep green for current job */
+}
+
+.dark-mode .job::after {
+    background: #444;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .work-experience {
+        padding-left: 2rem;
+    }
+
+    .work-experience::before {
+        left: 15px;
+    }
+
+    .job::before {
+        left: -1.75rem;
+        width: 10px;
+        height: 10px;
+    }
+
+    .job::after {
+        left: -1.5rem;
+        width: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-experience {
+        padding-left: 1.5rem;
+    }
+
+    .work-experience::before {
+        left: 12px;
+    }
+
+    .job::before {
+        left: -1.4rem;
+        width: 8px;
+        height: 8px;
+    }
+
+    .job::after {
+        left: -1.2rem;
+        width: 1.2rem;
+    }
+}
+
+/* Make the first job's dot green - using more specific selector */
+.work-experience .job:first-of-type::before {
+    background: #4CAF50 !important; /* Using !important to override any other styles */
+}
+
+.dark-mode .work-experience .job:first-of-type::before {
+    background: #4CAF50 !important;
 }

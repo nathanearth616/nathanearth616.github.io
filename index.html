@@ -9,15 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta name="description" content="n8's Portfolio - Software Engineer specializing in AR, Blockchain, and AI">
+    <meta name="keywords" content="software engineer, AR developer, blockchain, AI, Ghana">
+    <meta property="og:title" content="n8's Portfolio">
+    <meta property="og:description" content="Software Engineer Portfolio">
+    <meta property="og:image" content="george.jpg">
 </head>
 <body class="light-mode">
     <header>
         <div class="profile-container">
-            <img src="george.jpg" alt="Kato's profile picture" class="profile-image">
+            <img src="george.jpg" alt="Nathan's profile picture" class="profile-image">
             <div class="profile-info">
-                <h1>n8</h1>
-                <p class="username">@nathanearth616 everywhere</p>
-                <p class="title">software engineer <span class="dot"></span> ar <span class="dot"></span> blockchain <span class="dot"></span> ai</p> 
+                <h1 data-i18n="name">n8</h1>
+                <p class="username" data-i18n="username">@nathanearth616 everywhere</p>
+                <p class="title" data-i18n="title">software engineer <span class="dot"></span> ar <span class="dot"></span> blockchain <span class="dot"></span> ai</p> 
             </div>
         </div>
     </header>
@@ -36,6 +41,12 @@
 
         <section class="work-experience">
             <h2>XP</h2>
+            <div class="job">
+                <p class="duration">February 2025 - February 2025</p>
+                <h3>Arena233 Webapp</h3>
+                <p class="company">Full Stack Developer</p>
+                <p class="pp">Planned, designed, and engineered an ultra-modern webapp for Ghana's leading esport lounge.</p>
+            </div>
             <div class="job">
                 <p class="duration">January 2025 - February 2025</p>
                 <h3>Cartelic</h3>
@@ -83,30 +94,37 @@
             </div>
         </div>
     </footer>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        function setDarkMode(isDark) {
+            body.classList.toggle('dark-mode', isDark);
+            body.classList.toggle('light-mode', !isDark);
+            
+            // We're no longer changing the src, just toggling a class
+            darkModeToggle.classList.toggle('icon-light', isDark);
+            darkModeToggle.alt = isDark ? 'Light mode icon' : 'Dark mode icon';
+            
+            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            const isDark = !body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+        });
+
+        // Check for saved user preference, if any, on load
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            setDarkMode(true);
+        }
+
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setDarkMode(true);
+        }
+
+        window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', e => setDarkMode(e.matches));
+    </script>
 </body>
-<script>
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const body = document.body;
-
-    function setDarkMode(isDark) {
-        body.classList.toggle('dark-mode', isDark);
-        body.classList.toggle('light-mode', !isDark);
-        
-        // We're no longer changing the src, just toggling a class
-        darkModeToggle.classList.toggle('icon-light', isDark);
-        darkModeToggle.alt = isDark ? 'Light mode icon' : 'Dark mode icon';
-        
-        localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
-    }
-
-    darkModeToggle.addEventListener('click', () => {
-        const isDark = !body.classList.contains('dark-mode');
-        setDarkMode(isDark);
-    });
-
-    // Check for saved user preference, if any, on load
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        setDarkMode(true);
-    }
-</script>
 </html>
